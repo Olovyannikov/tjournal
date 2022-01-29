@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src/client",
+    "paths": {
+      "@/components": ["app/components/index.ts"],
+      "@/layouts": ["app/layouts/index.ts"],
+      "@/public-app": ["app/public/PagesHolder.tsx"],
+      "@/private-app": ["app/public/PagesHolder.tsx"],
+      "@/styles": ["assets/styles/style.scss"],
+      "@/assets/*": ["assets/*"],
+      "@/hooks/*": ["hooks/*"],
+      "@/utils/*": ["utils/*"]
+    },
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}
