@@ -11,6 +11,8 @@ import {
     NotificationsNoneOutlined as NotificationIcon,
 } from '@material-ui/icons';
 
+import logo from './logo.svg';
+
 import s from './Header.module.scss';
 
 export const Header = (): JSX.Element => {
@@ -22,11 +24,11 @@ export const Header = (): JSX.Element => {
                         <MenuIcon />
                     </IconButton>
                     <Link href='/'>
-                        <a>
+                        <a className={s.logo}>
                             <Image
                                 width={35}
                                 height={35}
-                                src='/static/img/logo.svg'
+                                src={logo}
                                 alt='Logotype'
                             />
                         </a>

@@ -3,8 +3,8 @@ import { MuiThemeProvider } from '@material-ui/core';
 
 import { theme } from '../../theme';
 
-import '@/styles';
 import 'macro-css';
+import '@/styles';
 import { AppProps } from 'next/app';
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {

@@ -3,7 +3,7 @@ import { Divider, Paper, Tab, Tabs, Typography } from '@material-ui/core';
 
 import { MainLayout } from '@/layouts';
 
-export const NewsPost = (): JSX.Element => {
+const NewsPost = (): JSX.Element => {
     return (
         <MainLayout contentFullWidth className='mb-50'>
             <FullPost />
@@ -25,3 +25,4 @@ export const NewsPost = (): JSX.Element => {
     );
 };
 
+export default NewsPost;
