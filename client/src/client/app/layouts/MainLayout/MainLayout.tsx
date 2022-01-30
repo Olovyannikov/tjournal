@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { PropsWithChildren, useRef, useState, KeyboardEvent, Component, FunctionComponent } from 'react';
+import { useRef, useState, KeyboardEvent, Component, FunctionComponent } from 'react';
 
 import { Main } from './Main/Main';
 import { Header } from './Header/Header';
@@ -13,6 +13,7 @@ import { MainLayoutProps } from './MainLayout.props';
 export const MainLayout = ({
                                children,
                                className,
+                               hideMenu,
                                hideComments,
                                contentFullWidth,
                                ...props
@@ -42,7 +43,7 @@ export const MainLayout = ({
                 >
                     Сразу к содержанию
                 </a>
-                <LeftSidebar />
+                {!hideMenu && <LeftSidebar />}
                 <Main className={clsx({ 'content--full': contentFullWidth })}>{children}</Main>
                 {!hideComments && <RightSidebar />}
             </div>

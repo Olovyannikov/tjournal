@@ -4,3 +4,5 @@ export * from './FollowButton/FollowButton';
 export * from './Post/Post'
 export * from './FullPost/FullPost';
 export * from './PostActions/PostActions';
+export * from './WriteForm/WriteForm';
+export * from './Editor/Editor';

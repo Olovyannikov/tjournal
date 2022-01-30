@@ -1,0 +1,13 @@
+.title {
+  width: 100%;
+
+  &::before,
+  &::after {
+    display: none;
+  }
+
+  input {
+    font-weight: 600;
+    font-size: 36px !important;
+  }
+}
