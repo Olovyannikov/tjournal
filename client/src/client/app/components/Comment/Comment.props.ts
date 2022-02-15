@@ -1,6 +1,8 @@
 export interface CommentPostProps {
-    user?: {
-        fullname?: string;
+    user: {
+        fullName: string;
+        avatarUrl: string;
     };
     text?: string;
+    createdAt: string;
 }

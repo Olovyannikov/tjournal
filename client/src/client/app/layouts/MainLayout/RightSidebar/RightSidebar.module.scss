@@ -1,15 +1,21 @@
 .root {
   width: 320px;
+  height: 100%;
   margin-bottom: 2px;
   position: sticky;
-  top: 80px;
+  top: 90px;
   margin-left: 40px;
 
-  h3 {
+  button {
+    @include btn-reset;
+  }
+
+  .buttonText b {
     display: flex;
     align-items: center;
     margin-top: 0;
     font-size: 18px;
+    line-height: 0;
     margin-bottom: 30px;
     cursor: pointer;
 
@@ -19,31 +25,15 @@
       margin-left: 8px;
     }
   }
-}
 
-.commentItem {
-  margin-bottom: 25px;
-}
+  &.rotated {
+    height: 100px;
+    transform: rotate(-90deg) translateY(120px);
+    margin: 0;
 
-.userInfo {
-  display: flex;
-  align-items: center;
-
-  img {
-    width: 24px;
-    height: 24px;
-    border-radius: 3px;
-    margin-right: 8px;
+    svg {
+      transform: rotate(-90deg);
+    }
   }
 }
 
-.text {
-  font-size: 16px;
-  margin-top: 8px;
-  margin-bottom: 5px;
-}
-
-.postTitle {
-  font-size: 15px;
-  font-weight: 500;
-}

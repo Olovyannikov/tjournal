@@ -2,6 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./src/client",
     "paths": {
+      "@/root/*": ["../../*"],
       "@/components": ["app/components/index.ts"],
       "@/layouts": ["app/layouts/index.ts"],
       "@/public-app": ["app/public/PagesHolder.tsx"],
@@ -9,7 +10,8 @@
       "@/styles": ["assets/styles/style.scss"],
       "@/assets/*": ["assets/*"],
       "@/hooks/*": ["hooks/*"],
-      "@/utils/*": ["utils/*"]
+      "@/utils/*": ["utils/*"],
+      "@/UI": ["app/components/UI/index.ts"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],

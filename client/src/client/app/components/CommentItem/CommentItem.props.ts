@@ -1,6 +1,7 @@
 export interface CommentItemProps {
     user: {
-        fullname: string;
+        fullName: string;
+        avatarUrl: string;
     };
     text: string;
     post: {

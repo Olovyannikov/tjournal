@@ -5,11 +5,12 @@ import MessageIcon from '@material-ui/icons/TextsmsOutlined';
 import UserAddIcon from '@material-ui/icons/PersonAddOutlined';
 
 import s from './FullPost.module.scss';
+import { Container } from '@/UI';
 
 export const FullPost = (): JSX.Element => {
     return (
         <Paper elevation={0} className={s.paper}>
-            <div style={{ margin: '0 auto', width: 680 }}>
+            <Container>
                 <Typography variant="h4" className={s.title}>
                     Superjet, летящий из Волгограда в Москву, подал сигнал бедствия. Возможно, в полете
                     произошла разгерметизация
@@ -54,7 +55,7 @@ export const FullPost = (): JSX.Element => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </Container>
         </Paper>
     );
 };

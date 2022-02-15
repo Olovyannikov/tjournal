@@ -4,5 +4,9 @@ import { createReactEditorJS } from 'react-editor-js';
 export const Editor: FC = (): JSX.Element => {
     const ReactEditorJS = createReactEditorJS();
 
-    return <ReactEditorJS />;
+    const options = {
+        placeholder: 'Введите текст вашей статьи'
+    }
+
+    return <ReactEditorJS {...options} />;
 };

@@ -37,9 +37,11 @@ export const Header = (): JSX.Element => {
                         <SearchIcon />
                         <input type='text' placeholder='Поиск' />
                     </div>
-                    <Button variant='contained' className={s.penButton}>
-                        Новая запись
-                    </Button>
+                    <Link href='/write'>
+                        <Button href='/write' variant='contained' className={s.penButton}>
+                            Новая запись
+                        </Button>
+                    </Link>
                 </div>
                 <div className='d-flex align-center'>
                     <IconButton>
