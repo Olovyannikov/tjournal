@@ -1,23 +1,31 @@
-import Link from 'next/link';
-import Image from 'next/image';
+import { useState } from 'react';
 
-import { Avatar, Button, IconButton, Paper } from '@material-ui/core';
+import Link from 'next/link';
+import {
+    Button,
+    IconButton,
+    Paper,
+} from '@material-ui/core';
 import {
     SearchOutlined as SearchIcon,
-    CreateOutlined as PenIcon,
     SmsOutlined as MessageIcon,
     Menu as MenuIcon,
-    ExpandMoreOutlined as ArrowBottom,
-    NotificationsNoneOutlined as NotificationIcon,
+    NotificationsNoneOutlined as NotificationIcon, AccountCircleOutlined,
 } from '@material-ui/icons';
 
-import logo from './logo.svg';
+import Logo from './img/logo.svg';
 
 import s from './Header.module.scss';
+import { AuthDialog } from '@/components';
 
 export const Header = (): JSX.Element => {
+    const [isOpenAuthDialog, setOpenAuthDialog] = useState<boolean>(false);
+
+    const openAuthDialog = () => setOpenAuthDialog(true);
+    const closeAuthDialog = () => setOpenAuthDialog(false);
+
     return (
-        <header>
+        <header className={s.header}>
             <Paper classes={{ root: s.root }} elevation={0}>
                 <div className='d-flex align-center'>
                     <IconButton>
@@ -25,12 +33,7 @@ export const Header = (): JSX.Element => {
                     </IconButton>
                     <Link href='/'>
                         <a className={s.logo}>
-                            <Image
-                                width={35}
-                                height={35}
-                                src={logo}
-                                alt='Logotype'
-                            />
+                            <Logo width={35} height={35} />
                         </a>
                     </Link>
                     <div className={s.searchBlock}>
@@ -50,17 +53,22 @@ export const Header = (): JSX.Element => {
                     <IconButton>
                         <NotificationIcon />
                     </IconButton>
-                    <Link href='/profile/1'>
-                        <a className='d-flex align-center'>
-                            <Avatar
-                                className={s.avatar}
-                                alt='Remy Sharp'
-                                src='https://leonardo.osnova.io/5ffeac9a-a0e5-5be6-98af-659bfaabd2a6/-/scale_crop/108x108/-/format/webp/'
-                            />
-                            <ArrowBottom />
-                        </a>
-                    </Link>
+                    {/*<Link href='/profile/1'>*/}
+                    {/*    <a className='d-flex align-center'>*/}
+                    {/*        <Avatar*/}
+                    {/*            className={s.avatar}*/}
+                    {/*            alt='Remy Sharp'*/}
+                    {/*            src='https://leonardo.osnova.io/5ffeac9a-a0e5-5be6-98af-659bfaabd2a6/-/scale_crop/108x108/-/format/webp/'*/}
+                    {/*        />*/}
+                    {/*        <ArrowBottom />*/}
+                    {/*    </a>*/}
+                    {/*</Link>*/}
+                    <button className={s.login} onClick={openAuthDialog}>
+                        <AccountCircleOutlined />
+                        Войти
+                    </button>
                 </div>
+                <AuthDialog onClose={closeAuthDialog} open={isOpenAuthDialog} />
             </Paper>
         </header>
     );

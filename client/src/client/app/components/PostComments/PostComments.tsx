@@ -10,9 +10,9 @@ import data from '@/root/data';
 
 import { PostCommentsProps } from './PostComments.props';
 
-export const PostComments = ({ }: PostCommentsProps): JSX.Element => {
+export const PostComments = ({}: PostCommentsProps): JSX.Element => {
     const [tabStatus, setTabStatus] = useState<0 | 1>(0);
-    const comments = data.comments[tabStatus ? "latest" : "popular"];
+    const comments = data.comments[tabStatus ? 'latest' : 'popular'];
 
     return (
         <Paper elevation={0} className='mt-40 p-30'>

@@ -1,15 +1,18 @@
-.root {
+.header {
   position: fixed;
-  display: flex;
   width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  //background-color: #fff4e2 !important;
-  background-color: #e2ffe7 !important;
-  padding: 0 35px 0 10px;
-  height: 60px;
+  min-height: 60px;
   margin-bottom: 14px;
   z-index: 1;
+}
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 35px 0 0;
+  width: 100%;
+  background-color: #e2ffe7 !important;
 }
 
 .logo {
@@ -60,5 +63,20 @@
       border-color: darken(#fff4e2, 15%);
       box-shadow: 0 0 0 3px rgb(229 160 64 / 12%);
     }
+  }
+}
+
+.login {
+  @include btn-reset;
+
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  font-weight: 500;
+  font-size: 16px;
+  gap: 8px;
+
+  &:hover {
+    color: #abe3b5;
   }
 }

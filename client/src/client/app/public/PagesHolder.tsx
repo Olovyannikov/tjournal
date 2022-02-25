@@ -4,3 +4,5 @@ export * from './SettingsPage/SettingsPage';
 export * from './SettingsIDPage/SettingsIDPage';
 export * from './NewsItemsPage/NewsItemsPage';
 export * from './WritePage/WritePage';
+export * from './MessagesPage/MessagesPage';
+export * from './FollowsPage/FollowsPage';

@@ -18,7 +18,7 @@ export const LeftSidebar = (): JSX.Element => {
                 {menu.map(({ path, icon, text }: SidebarInterface): JSX.Element => (
                     <li key={path}>
                         <Link href={path}>
-                            <Button href={path} className={clsx({[s.active]: path === router.asPath})}>
+                            <Button href={path} variant={router.asPath === path ? "contained" : "text"}>
                                 {icon}
                                 {text}
                             </Button>

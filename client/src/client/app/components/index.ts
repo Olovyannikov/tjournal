@@ -8,3 +8,4 @@ export * from './WriteForm/WriteForm';
 export * from './Editor/Editor';
 export * from './PostComments/PostComments';
 export * from './CommentItem/CommentItem';
+export * from './AuthDialog/AuthDialog';
