@@ -11,6 +11,7 @@
 - [TypeScript](https://www.typescriptlang.org/)
 - [Material  UI](https://mui.com/)
 - [SCSS / CSS-modules](https://sass-lang.com/)
+- [EditorJS](https://editorjs.io/)
 
 ### Backend
 
